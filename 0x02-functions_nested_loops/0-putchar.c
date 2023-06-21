@@ -1,12 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main - this program print _putchar
+ * print_putchar - write char by char in a while loop until '\0'
+ * @str: the string that i want to print
  *
- * Return: 0
+ * Return: no return value.
  */
-int main(void)
+
+void	print_putchar(char *str)
 {
-	write(STDOUT_FILENO, "_putchar\n", 9);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		putchar(str[i]);
+		i++;
+	}
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+int	main(void)
+{
+	print_putchar("_putchar\n");
 	return (0);
 }

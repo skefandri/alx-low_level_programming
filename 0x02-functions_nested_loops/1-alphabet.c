@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * print_alphabet - is function that print the character lower
- * write is functions system call that print the character
+ * print_alphabet - print lower_alpha
+ *
+ * Return: no return value.
  */
 
 void	print_alphabet(void)
 {
-	char	c;
+	int	c;
 
 	c = 'a';
 	while (c <= 'z')
 	{
-		write(STDOUT_FILENO, &c, 1);
+		putchar(c);
 		c++;
 	}
+	putchar('\n');
 }
